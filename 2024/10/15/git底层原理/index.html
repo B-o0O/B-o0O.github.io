@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>B-o0O</title>
+  <title>git底层原理 | B-o0O</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="波波的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="B-o0O">
-<meta property="og:url" content="https://b-o0o.github.io/blog/index.html">
+  <meta name="description" content="Git底层原理git 日志git log &#x2F;git log -g&#x2F;git reflog 区别 理解区别Question  git reflog 和git log -g查看的是整个仓库的历史,git log 查看的是当亲分支的历史，这样理解对吗 Answer 您的理解是正确的。以下是对这几条命令的具体说明：  **git log**：这个命令用于查看当前分支的提交历史。它只会显示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git底层原理">
+<meta property="og:url" content="https://b-o0o.github.io/blog/2024/10/15/git%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="B-o0O">
-<meta property="og:description" content="波波的博客">
+<meta property="og:description" content="Git底层原理git 日志git log &#x2F;git log -g&#x2F;git reflog 区别 理解区别Question  git reflog 和git log -g查看的是整个仓库的历史,git log 查看的是当亲分支的历史，这样理解对吗 Answer 您的理解是正确的。以下是对这几条命令的具体说明：  **git log**：这个命令用于查看当前分支的提交历史。它只会显示">
 <meta property="og:locale">
+<meta property="og:image" content="https://b-o0o.github.io/blog/git%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/readlog.png">
+<meta property="og:image" content="https://b-o0o.github.io/blog/git%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/image.png">
+<meta property="og:image" content="https://b-o0o.github.io/blog/git%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/reflog.png">
+<meta property="og:image" content="https://b-o0o.github.io/blog/git%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/log-g.png">
+<meta property="article:published_time" content="2024-10-15T13:52:34.000Z">
+<meta property="article:modified_time" content="2024-10-15T16:09:35.735Z">
 <meta property="article:author" content="Bobo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://b-o0o.github.io/blog/git%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/readlog.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="B-o0O" type="application/atom+xml">
   
@@ -69,47 +76,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-高质量resource" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/blog/2024/10/16/%E9%AB%98%E8%B4%A8%E9%87%8Fresource/" class="article-date">
-  <time class="dt-published" datetime="2024-10-16T15:14:56.000Z" itemprop="datePublished">2024-10-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/blog/2024/10/16/%E9%AB%98%E8%B4%A8%E9%87%8Fresource/">高质量resource</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://b-o0o.github.io/blog/2024/10/16/%E9%AB%98%E8%B4%A8%E9%87%8Fresource/" data-id="cm2c0llal0001ggur2k9jcskl" data-title="高质量resource" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-git底层原理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-git底层原理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/blog/2024/10/15/git%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/" class="article-date">
   <time class="dt-published" datetime="2024-10-15T13:52:34.000Z" itemprop="datePublished">2024-10-15</time>
@@ -122,8 +89,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/blog/2024/10/15/git%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/">git底层原理</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      git底层原理
     </h1>
   
 
@@ -180,11 +147,23 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2024/10/16/%E9%AB%98%E8%B4%A8%E9%87%8Fresource/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          高质量resource
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 
 </section>
