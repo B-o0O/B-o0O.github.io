@@ -1,4 +1,8 @@
-+ [hexo官网文档](https://hexo.io/zh-cn/docs/commands) 测试
+<<<<<<< HEAD
++ [hexo官网文档](https://hexo.io/zh-cn/docs/commands)
+=======
++ [hexo官网文档](https://hexo.io/zh-cn/docs/commands)
+>>>>>>> bc55a233d66aeb5ab88d4525f49a64a3017d7a49
 + [icarus](https://ppoffice.github.io/hexo-theme-icarus/uncategorized/getting-started-with-icarus/)
 + 创建文章
 `hexo new [layout] title `生成于默认文件夹`source/_posts`下
