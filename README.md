@@ -1,12 +1,18 @@
-<<<<<<< HEAD
 + [hexo官网文档](https://hexo.io/zh-cn/docs/commands)
-=======
-+ [hexo官网文档](https://hexo.io/zh-cn/docs/commands)
->>>>>>> bc55a233d66aeb5ab88d4525f49a64a3017d7a49
 + [icarus](https://ppoffice.github.io/hexo-theme-icarus/uncategorized/getting-started-with-icarus/)
++ [主题配置](https://ppoffice.github.io/hexo-theme-icarus/Configuration/icarus-user-guide-configuring-the-theme/)
 + 创建文章
-`hexo new [layout] title `生成于默认文件夹`source/_posts`下
-`hexo new [layout] -p path/to/title ` 生成于文件夹`source_posts/path/to`下
+```
+Layout	Path
+post	source/_posts
+page	source
+draft	source/_drafts
+
+hexo new page "lahp"
+hexo new page "history" --path "lahp/history"
+hexo new page "qing" --path "lahp/history/qing"
+
+```
 + "hexo generate"
 功能：生成静态文件。这个命令会将你的 Markdown 博客文章以及其他资源转换成 HTML 格式，并将其放在 public 目录中。你在发布或查看网站时，会用到生成的这些文件。
 
