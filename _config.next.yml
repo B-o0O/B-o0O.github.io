@@ -100,25 +100,34 @@ open_graph:
 menu:
   Home: / || fa fa-home
   ComputerScience: 
-    default: /computer-science/ 
+    default: /computer-science/ || fas fa-laptop-code
     Web: 
-      default: /web/
+      default: /web/ || fa-brands fa-node-js"
     ComputerNetwork: 
-      default: /computer-network/
-    ProgrammingLanguage: 
-      default: /programming-language/
+      default: /computer-network/ || fa-solid fa-globe
+    ProgrammingLanguage:  
+      default: /programming-language/ || fa-regular fa-file-code
+    MissingSemester: 
+      default: /missing-semester/ || fa-solid fa-terminal
+      git: /git/ 
+  Science: 
+    default: /science/ || fa-solid fa-atom
+    TechHistory: 
+      default: /tech-history/ || fa-solid fa-timeline
+
   LAHP: 
-    default: /lahp/ || fa fa-archive
-    literature: 
-      default: /literature/ || fa fa-archive
-    art: 
-      default: /art/
-    history: 
-      default: /history/ || fa fa-archive
+    default: /lahp/ || fa fa-book
+    Literature: 
+      default: /literature/ || fa-solid fa-book-open
+    Art: 
+      default: /art/ || fa-solid fa-clapperboard
+    History: 
+      default: /history/ || fa-solid fa-timeline
       qing: /qing/ || fa fa-book
-    philosophy: 
-      default: /philosophy/
-  
+    Philosophy: 
+      default: /philosophy/ || fa-solid fa-graduation-cap
+  Resource: /resource/ocean/ || fa-solid fa-database
+
     
 
   #about: /about/ || fa fa-user
@@ -132,7 +141,7 @@ menu:
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 
 # ---------------------------------------------------------------

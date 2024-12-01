@@ -8,7 +8,9 @@ subtitle: ''
 description: '波波的博客'
 keywords:
 author: Bobo
-language: zh-CN
+language: 
+  - zh-CN
+  - en
 timezone: 'Asia/Shanghai'
 
 # URL
