@@ -123,10 +123,10 @@ menu:
       default: /art/ || fa-solid fa-clapperboard
     History: 
       default: /history/ || fa-solid fa-timeline
-      qing: /qing/ || fa fa-book
+      Qing Dynasty: /qing.html || fa fa-book
     Philosophy: 
       default: /philosophy/ || fa-solid fa-graduation-cap
-  Resource: /resource/ocean/ || fa-solid fa-database
+  Resource: /resource/ocean.html || fa-solid fa-database
 
     
 
@@ -176,7 +176,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: #/images/logo.png
   # If true, the avatar will be displayed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -190,8 +190,8 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  GitHub: https://github.com/B-o0O || fab fa-github
+  E-Mail: mailto:boboboom0123@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
@@ -205,6 +205,8 @@ social_icons:
   icons_only: false
   transition: false
 
+
+# 在sidebar下面的跳转链接
 # Blog rolls
 links_settings:
   icon: fa fa-globe
@@ -212,7 +214,7 @@ links_settings:
   layout: block
 
 links:
-  #Title: https://example.com
+  # Title: https://example.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
@@ -247,7 +249,7 @@ footer:
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#ff0000"
+    color: "#060270"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   # Set to `false` to disable the copyright statement.
@@ -384,8 +386,10 @@ mobile_layout_economy: false
 
 # Browser header panel color.
 theme_color:
-  light: "#222"
-  dark: "#222"
+  # light: "#222"
+  # dark: "#222"
+  light: "#060270"
+  dark: "#060270"
 
 # Override browsers' default behavior.
 body_scrollbar:
