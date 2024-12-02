@@ -28,6 +28,7 @@ source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
+# archive_dir: /
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
@@ -53,15 +54,19 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
-  line_number: true
   auto_detect: false
-  tab_replace: ''
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
   preprocess: true
   line_number: true
-  tab_replace: ''
+  line_threshold: 0
+  tab_replace: ""
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
