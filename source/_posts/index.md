@@ -10,21 +10,3 @@ tags:
 {% note success %}
 一个 Success 提示
 {% endnote %}
-
-
-
-```[language] [title] [url] [link text] [additional options]
-code snippet
-```
-
-这是我分享的代码片段：
-
-{% gist 1234567890abcdef 'example.js' %}
-
-以下是一个 JSFiddle 示例：
-
-{% jsfiddle myshorttag 'result' 'css' '600' '400' %}
-
-最后，这是一个有趣的视频：
-
-{% youtube lJIrF4YjHfQ %}

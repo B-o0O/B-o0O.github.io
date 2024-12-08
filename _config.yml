@@ -27,8 +27,8 @@ pretty_urls:
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: archives
-# archive_dir: /
+# archive_dir: archives
+archive_dir: /
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
@@ -110,6 +110,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+# theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -128,3 +129,12 @@ sitemap:
   # rel: false
   tags: true
   categories: true
+
+#Plugins search plugin
+#https://github.com/next-theme/hexo-generator-searchdb
+
+search:
+  path: search.xml
+  field: all 
+  content: true
+  format: html

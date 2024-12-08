@@ -44,4 +44,4 @@ git reflog 和git log -g查看的是整个仓库的历史,git log 查看的是�
 ![alt text](git底层原理/reflog.png)
 
 + git log -g 查看包括reflog 的日志
-![alt text](git底层原理/log-g.png)
+![alt text](computer-science/missing-semester/git/images/log-g.png)
