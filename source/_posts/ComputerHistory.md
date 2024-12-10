@@ -10,7 +10,7 @@ tags:
 一台计算机由软件和硬件构成，软件实际上就是具有逻辑性的信息集合，具体来说就是数据集和指令集的有序组织，信息的承载则是通过编码系统来实现的，现在的计算机几乎都使用二进制编码。硬件则是编码系统的物理承载介质，现在的计算机硬件结构都是基于冯诺依曼结构扩展而来的，早期计算机的发展是和硬件绑定的，大致可以分为继电器时期、真空管时期、晶体管时期。
 
 <div>
-    <img src="/ComputerHistory/image.png" width="50%" height="50%" style="border: 2px solid black;float: left;">
+    <img src="/ComputerHistory/image.png" width="50%" height="50%" style="border: 1px solid black;float: left;">
 </div>
 
 
@@ -44,10 +44,9 @@ tags:
 | Z11              | Konrad Zuse    | Zuse KG                     | 1,665       | 1955          |                                                    |
 | Mark II          |                | Electrotechnical Laboratory | 22,253      | 1955          |                                                    |
 
-{%endnote%}
-
-
+{%endnote%} 
 ### 什么是继电器
 
+                                                          
 真空管
 晶体管
