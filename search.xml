@@ -5,7 +5,7 @@
     <url>//ComputerHistory/</url>
     <content><![CDATA[<h1 id="计算机发展史"><a href="#计算机发展史" class="headerlink" title="计算机发展史"></a>计算机发展史</h1><p>一台计算机由软件和硬件构成，软件实际上就是具有逻辑性的信息集合，具体来说就是数据集和指令集的有序组织，信息的承载则是通过编码系统来实现的，现在的计算机几乎都使用二进制编码。硬件则是编码系统的物理承载介质，现在的计算机硬件结构都是基于冯诺依曼结构扩展而来的，早期计算机的发展是和硬件绑定的，大致可以分为继电器时期、真空管时期、晶体管时期。</p>
 <div>
-    <img src="/ComputerHistory/image.png" width="50%" height="50%" style="border: 2px solid black;float: left;">
+    <img src="/ComputerHistory/image.png" width="50%" height="50%" style="border: 1px solid black;float: left;">
 </div>
 
 
@@ -196,9 +196,7 @@
 </tr>
 </tbody></table>
 
-</details>
-
-
+</details> 
 <h3 id="什么是继电器"><a href="#什么是继电器" class="headerlink" title="什么是继电器"></a>什么是继电器</h3><p>真空管<br>晶体管</p>
 ]]></content>
       <categories>
@@ -222,6 +220,25 @@
       </tags>
   </entry>
   <entry>
+    <title>WebComponents</title>
+    <url>//WebComponents/</url>
+    <content><![CDATA[<div class="note info"><p><a href="https://kinsta.com/blog/web-components/#what-are-web-components">理解WebComponents</a></p>
+</div>
+<p>Web Components 作为一组技术于 2012 年提出，旨在通过提供封装、模块化和可重用的组件来改善 Web 开发。在Web Components出现之前，没有自定义（或风格化）组件并且做到可复用的方法，只是提供像jQuery这样的JS库来简化DOM操作，<br>这种方法是通过使用 JavaScript 函数和对象来创建可复用的代码。例如，可以创建构造函数，使用这些构造函数来生成带有特定功能或样式的 DOM 元素，但缺乏一种系统化的方式来创建可重用的组件或封装的功能。W3C和WAHTWG组织将这些需求正式标准化、制定规范后，浏览器厂商根据规范开发相应的接口（API）以供使用，这部分API就叫做Web Components API,Web Components 的核心特性包括：</p>
+<ul>
+<li>自定义元素：允许开发者定义新的 HTML 元素及其行为。</li>
+<li>阴影 DOM：为组件提供局部 DOM，允许样式和结构的封装。</li>
+<li>HTML 模板：允许开发者在文档中定义可重用的模板。<br>对应的API有：</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>index</title>
     <url>//index/</url>
     <content><![CDATA[<p>主页</p>
@@ -237,13 +254,13 @@
 ]]></content>
   </entry>
   <entry>
-    <title>computer-science</title>
-    <url>/computer-science/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
+    <title>computer-science</title>
+    <url>/computer-science/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -271,6 +288,11 @@
 <h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><h1 id="手册"><a href="#手册" class="headerlink" title="手册"></a>手册</h1>]]></content>
   </entry>
   <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/science/index.html</url>
     <content><![CDATA[]]></content>
@@ -281,18 +303,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/computer-science/web/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/computer-science/missing-semester/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/computer-science/programming-language/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -307,14 +324,8 @@
   </entry>
   <entry>
     <title></title>
-    <url>/computer-science/programming-language/index.html</url>
+    <url>/computer-science/web/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lahp/history/index.html</url>
-    <content><![CDATA[<p>历史</p>
-]]></content>
   </entry>
   <entry>
     <title>中国近代史</title>
@@ -382,8 +393,8 @@
   </entry>
   <entry>
     <title></title>
-    <url>/lahp/literature/pre-qin.html</url>
-    <content><![CDATA[<p>先秦文学</p>
+    <url>/lahp/history/index.html</url>
+    <content><![CDATA[<p>历史</p>
 ]]></content>
   </entry>
   <entry>
@@ -396,6 +407,12 @@
     <title></title>
     <url>/lahp/philosophy/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lahp/literature/pre-qin.html</url>
+    <content><![CDATA[<p>先秦文学</p>
+]]></content>
   </entry>
   <entry>
     <title></title>

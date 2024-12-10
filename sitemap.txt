@@ -1,3 +1,4 @@
+https://b-o0o.github.io/WebComponents/
 https://b-o0o.github.io/ComputerHistory/
 https://b-o0o.github.io/computer-science/missing-semester/hexo/hexo.html
 https://b-o0o.github.io/OSHistory/
@@ -25,5 +26,7 @@ https://b-o0o.github.io/lahp/index.html
 https://b-o0o.github.io/
 https://b-o0o.github.io/tags/ComputerHistory/
 https://b-o0o.github.io/tags/OS/
+https://b-o0o.github.io/tags/Web/
 https://b-o0o.github.io/categories/ComputerScience/
 https://b-o0o.github.io/categories/ComputerScience/TechHistory/
+https://b-o0o.github.io/categories/Web/
