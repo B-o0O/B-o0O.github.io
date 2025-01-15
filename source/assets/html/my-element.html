@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components 示例</title>
+</head>
+
+<body>
+    <h1>Web Components 示例</h1>
+    <my-element></my-element>
+
+    <template id="myTemplate">
+        <style>
+            p {
+                color: blue;
+                font-size: 20px;
+            }
+        </style>
+        <p>这是一个模板内容</p>
+    </template>
+
+    <script>
+        class MyElement extends HTMLElement {
+            constructor() {
+                super();
+                const shadow = this.attachShadow({ mode: 'open' });
+                const template = document.getElementById('myTemplate');
+                const clone = document.importNode(template.content, true);
+                shadow.appendChild(clone);
+            }
+        }
+        customElements.define('my-element', MyElement);
+    </script>
+</body>
+
+</html>

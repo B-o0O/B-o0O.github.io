@@ -103,6 +103,7 @@ menu:
     default: /computer-science/ || fas fa-laptop-code
     Web: 
       default: /web/ || fa-brands fa-node-js"
+      html: /html/html.html
     ComputerNetwork: 
       default: /computer-network/ || fa-solid fa-globe
     ProgrammingLanguage:  
