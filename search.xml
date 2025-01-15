@@ -208,6 +208,50 @@
       </tags>
   </entry>
   <entry>
+    <title>WebComponents</title>
+    <url>//WebComponents/</url>
+    <content><![CDATA[<div class="note info"><p><a href="https://kinsta.com/blog/web-components/#what-are-web-components">理解WebComponents</a></p>
+</div>
+<p>Web Components 作为一组技术于 2012 年提出，旨在通过提供封装、模块化和可重用的组件来改善 Web 开发。在Web Components出现之前，没有自定义（或风格化）组件并且做到可复用的方法，只是提供像jQuery这样的JS库来简化DOM操作，这种方法是通过使用 JavaScript 函数和对象来创建可复用的代码。例如，可以创建构造函数，使用这些构造函数来生成带有特定功能或样式的 DOM 元素，但缺乏一种系统化的方式来创建可重用的组件或封装的功能。W3C和WAHTWG组织将这些需求正式标准化、制定规范后，浏览器厂商根据规范开发相应的接口（API）以供使用，这部分API就叫做Web Components API,Web Components 的核心特性包括custom element、shadow dom、template。</p>
+<div class="tabs" id="webcomponent"><ul class="nav-tabs"><li class="tab active"><a href="#webcomponent-1">HTML DOM Tree</a></li><li class="tab"><a href="#webcomponent-2">custom elements</a></li><li class="tab"><a href="#webcomponent-3">shadowdom</a></li><li class="tab"><a href="#webcomponent-4">template</a></li><li class="tab"><a href="#webcomponent-5">example</a></li></ul><div class="tab-content"><div class="tab-pane active" id="webcomponent-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Node</span><br><span class="line">├── Document</span><br><span class="line">│   ├── DocumentFragment</span><br><span class="line">│   ├── DocumentType  (例如: &lt;!DOCTYPE html&gt;)</span><br><span class="line">│   └── ... (其他文档类型)</span><br><span class="line">├── Element</span><br><span class="line">│   ├── HTMLElement</span><br><span class="line">│   │   ├── HTMLAnchorElement           // <span class="language-xml"><span class="tag">&lt;<span class="name">a</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLBodyElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLDivElement              // <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLHeadingElement           // <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span>, <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span>, ..., <span class="language-xml"><span class="tag">&lt;<span class="name">h6</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLImageElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">img</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLInputElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">input</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLLabelElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLParagraphElement         // <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLSpanElement              // <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLTableElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLTableRowElement          // <span class="language-xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLTableCellElement         // <span class="language-xml"><span class="tag">&lt;<span class="name">td</span>&gt;</span></span>, <span class="language-xml"><span class="tag">&lt;<span class="name">th</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLFormElement              // <span class="language-xml"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLSelectElement            // <span class="language-xml"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span></span><br><span class="line">│   │   └── ... (其他 HTML 元素)</span><br><span class="line">│   ├── SVGElement                       // SVG 元素的基础类</span><br><span class="line">│   │   ├── SVGCircleElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">circle</span>&gt;</span></span></span><br><span class="line">│   │   ├── SVGRectElement               // <span class="language-xml"><span class="tag">&lt;<span class="name">rect</span>&gt;</span></span></span><br><span class="line">│   │   └── ... (其他 SVG 元素)</span><br><span class="line">│   ├── Text</span><br><span class="line">│   ├── Comment</span><br><span class="line">│   └── ... (其他节点类型，如 ProcessingInstruction)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="webcomponent-2"><p>通过继承 <code>HTMLElement</code> 类并实现其中的 API。具体包括：</p>
+<ul>
+<li><code>customElements.define(name, constructor, options)</code>：定义一个新的自定义元素。</li>
+<li><code>customElements.get(name)</code>：获取指定名称的自定义元素构造函数。</li>
+<li>生命周期回调方法：<ul>
+<li><code>connectedCallback</code>：当自定义元素被添加到文档 DOM 中时调用。</li>
+<li><code>disconnectedCallback</code>：当自定义元素从文档 DOM 中移除时调用。</li>
+<li><code>adoptedCallback</code>：当自定义元素被移动到新的文档时调用。</li>
+<li><code>attributeChangedCallback(name, oldValue, newValue)</code>：当自定义元素的属性被添加、移除或更改时调用。</li>
+</ul>
+</li>
+</ul></div><div class="tab-pane" id="webcomponent-3"><p>通过 Shadow API 封装自定义元素的样式。具体包括：</p>
+<ul>
+<li><code>attachShadow(options)</code>：将 shadow DOM 树附加到元素上。</li>
+<li><code>ShadowRoot</code>：shadow DOM 树的根节点，提供对 shadow DOM 的访问。</li>
+<li><code>mode</code>：指定 shadow DOM 的模式，可以是 <code>&#39;open&#39;</code> 或 <code>&#39;closed&#39;</code>。<ul>
+<li><code>&#39;open&#39;</code>：表示 shadow DOM 可以通过 JavaScript 访问。</li>
+<li><code>&#39;closed&#39;</code>：表示 shadow DOM 不能通过 JavaScript 访问。</li>
+</ul>
+</li>
+</ul>
+<p>通过这种方式，可以确保自定义元素的样式不会受到外部文档的影响，同时外部代码也无法直接改变该元素的样式。</p></div><div class="tab-pane" id="webcomponent-4"><p>使用模板语法，便于直接编写 HTML 语法，否则需要使用 <code>innerHTML</code>、<code>content</code> 等语法硬编码。具体包括：</p>
+<ul>
+<li><code>&lt;template&gt;</code>：定义可重用的模板。</li>
+<li><code>document.importNode(template.content, true)</code>：克隆模板内容。</li>
+<li><code>template.content.cloneNode(true)</code>：克隆模板内容（现代浏览器中更推荐使用 <code>importNode</code>）。</li>
+</ul>
+<p>通过模板语法，可以更清晰地组织和重用 HTML 内容，避免硬编码 HTML 字符串。</p></div><div class="tab-pane" id="webcomponent-5"><p><a href="/assets/html/my-element.html">效果</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Web Components 示例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Web Components 示例<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">my-element</span>&gt;</span><span class="tag">&lt;/<span class="name">my-element</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&quot;myTemplate&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-size</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个模板内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">class</span> <span class="title class_">MyElement</span> <span class="keyword">extends</span> <span class="title class_ inherited__">HTMLElement</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="variable language_">super</span>();</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> shadow = <span class="variable language_">this</span>.<span class="title function_">attachShadow</span>(&#123; <span class="attr">mode</span>: <span class="string">&#x27;open&#x27;</span> &#125;);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> template = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;myTemplate&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> clone = <span class="variable language_">document</span>.<span class="title function_">importNode</span>(template.<span class="property">content</span>, <span class="literal">true</span>);</span></span><br><span class="line"><span class="language-javascript">                shadow.<span class="title function_">appendChild</span>(clone);</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">        customElements.<span class="title function_">define</span>(<span class="string">&#x27;my-element&#x27;</span>, <span class="title class_">MyElement</span>);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+<p>我们发现是不是和Vue SFC很像？其实是不一样的，Web Components方式是原生的JS，不依赖任何框架，Vue是通过VDOM方式实现的，现在似乎使用Web Components的越来越多了。<a href="https://juejin.cn/post/7135805641943154702">点这里查看他们的区别</a></p>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OSHistory</title>
     <url>//OSHistory/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1>]]></content>
@@ -220,32 +264,6 @@
       </tags>
   </entry>
   <entry>
-    <title>WebComponents</title>
-    <url>//WebComponents/</url>
-    <content><![CDATA[<div class="note info"><p><a href="https://kinsta.com/blog/web-components/#what-are-web-components">理解WebComponents</a></p>
-</div>
-<p>Web Components 作为一组技术于 2012 年提出，旨在通过提供封装、模块化和可重用的组件来改善 Web 开发。在Web Components出现之前，没有自定义（或风格化）组件并且做到可复用的方法，只是提供像jQuery这样的JS库来简化DOM操作，<br>这种方法是通过使用 JavaScript 函数和对象来创建可复用的代码。例如，可以创建构造函数，使用这些构造函数来生成带有特定功能或样式的 DOM 元素，但缺乏一种系统化的方式来创建可重用的组件或封装的功能。W3C和WAHTWG组织将这些需求正式标准化、制定规范后，浏览器厂商根据规范开发相应的接口（API）以供使用，这部分API就叫做Web Components API,Web Components 的核心特性包括：</p>
-<ul>
-<li>自定义元素：允许开发者定义新的 HTML 元素及其行为。</li>
-<li>阴影 DOM：为组件提供局部 DOM，允许样式和结构的封装。</li>
-<li>HTML 模板：允许开发者在文档中定义可重用的模板。<br>对应的API有：</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>index</title>
-    <url>//index/</url>
-    <content><![CDATA[<p>主页</p>
-<div class="note success"><p>一个 Success 提示</p>
-</div>]]></content>
-  </entry>
-  <entry>
     <title>404</title>
     <url>/404/index.html</url>
     <content><![CDATA[<script src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"
@@ -256,11 +274,6 @@
   <entry>
     <title>categories</title>
     <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>computer-science</title>
-    <url>/computer-science/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -288,8 +301,8 @@
 <h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><h1 id="手册"><a href="#手册" class="headerlink" title="手册"></a>手册</h1>]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title></title>
+    <url>/computer-science/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -298,8 +311,55 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title></title>
-    <url>/computer-science/computer-network/index.html</url>
+    <url>/assets/html/my-element.html</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components 示例</title>
+</head>
+
+<body>
+    <h1>Web Components 示例</h1>
+    <my-element></my-element>
+
+    <template id="myTemplate">
+        <style>
+            p {
+                color: blue;
+                font-size: 20px;
+            }
+        </style>
+        <p>这是一个模板内容</p>
+    </template>
+
+    <script>
+        class MyElement extends HTMLElement {
+            constructor() {
+                super();
+                const shadow = this.attachShadow({ mode: 'open' });
+                const template = document.getElementById('myTemplate');
+                const clone = document.importNode(template.content, true);
+                shadow.appendChild(clone);
+            }
+        }
+        customElements.define('my-element', MyElement);
+    </script>
+</body>
+
+</html>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/computer-science/programming-language/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -309,7 +369,12 @@
   </entry>
   <entry>
     <title></title>
-    <url>/computer-science/programming-language/index.html</url>
+    <url>/computer-science/computer-network/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/computer-science/web/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -321,11 +386,6 @@
 <p>这是文章的详细内容，只有在访问文章的详情页时才会显示。<br>在这里您可以添加更多的信息、图片或者其他内容。</p>
 <p>您可以在不同的部分讨论主题、分享经验或讲述故事。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/computer-science/web/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>中国近代史</title>
@@ -494,6 +554,19 @@
 
 
 
+]]></content>
+  </entry>
+  <entry>
+    <title>html</title>
+    <url>/computer-science/web/html/html.html</url>
+    <content><![CDATA[<h1 id="HTMLDOM"><a href="#HTMLDOM" class="headerlink" title="HTMLDOM"></a>HTMLDOM</h1><h2 id="DOM-Interface-Inherit-Tree"><a href="#DOM-Interface-Inherit-Tree" class="headerlink" title="DOM Interface Inherit Tree"></a>DOM Interface Inherit Tree</h2><h2 id="Event-接口"><a href="#Event-接口" class="headerlink" title="Event 接口"></a>Event 接口</h2><div class="note info"><p><a href="https://dom.spec.whatwg.org/#interface-event">接口标准</a></p>
+</div>
+<p><code>event = new Event(type [, eventInitDict])</code></p>
+<div class="tabs" id="eventinitdict-"><ul class="nav-tabs"><li class="tab active"><a href="#eventinitdict--1">bubbles</a></li><li class="tab"><a href="#eventinitdict--2">cancelable</a></li><li class="tab"><a href="#eventinitdict--3">composed</a></li></ul><div class="tab-content"><div class="tab-pane active" id="eventinitdict--1"><p>js事件触发机制:捕获阶段&#x3D;&gt;目标事件阶段&#x3D;&gt;冒泡阶段<br>捕获阶段:事件触发顺序从最外层元素documen到目标事件元素<br>目标事件阶段:目标事件触发<br>冒泡阶段:事件触发顺序从目标事件元素到最外层元素document</p></div><div class="tab-pane" id="eventinitdict--2"><p>默认行为是否可取消,即event.preventDefault()是否可执行;另外当EventTarget的passive&#x3D;true时候即认为语句event.preventDefault()将不会执行,即默认行为会执行.即伪代码:<code>event.preventDefault() = cancelable &amp;&amp; !passive</code></p></div><div class="tab-pane" id="eventinitdict--3"></div></div></div>
+
+<h2 id="EventTarget-接口"><a href="#EventTarget-接口" class="headerlink" title="EventTarget 接口"></a>EventTarget 接口</h2><div class="note info"><p><a href="https://dom.spec.whatwg.org/#eventtarget">接口标准</a></p>
+</div>
+<p><code>target . addEventListener(type, callback [, options])</code><br>  <div class="tabs" id="options"><ul class="nav-tabs"><li class="tab active"><a href="#options-1">caputer</a></li><li class="tab"><a href="#options-2">passive</a></li><li class="tab"><a href="#options-3">once</a></li></ul><div class="tab-content"><div class="tab-pane active" id="options-1"><p>capture控制事件是否在捕获阶段执行</p></div><div class="tab-pane" id="options-2"><p>passive控制event.preventDefault()是否可以执行</p></div><div class="tab-pane" id="options-3"><p>控制事件是否执行一次,once&#x3D;true,则执行一次后销毁该事件</p></div></div></div></p>
 ]]></content>
   </entry>
 </search>
