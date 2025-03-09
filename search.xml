@@ -308,7 +308,13 @@
 <li><a href="https://awesome-programming-books.github.io/">技术书籍网站</a><br><img src="/resource/ocean/site/awesomebook.png" alt="book"></li>
 <li><a href="https://ocw.mit.edu/">MIT OpenCourseWare</a><br><img src="/resource/ocean/site/mitocw.png" alt="alt text"></li>
 </ol>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><h1 id="手册"><a href="#手册" class="headerlink" title="手册"></a>手册</h1>]]></content>
+<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
+<li>hexo建站<ol>
+<li><a href="https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next-custom/">自定义样式</a>**</li>
+</ol>
+</li>
+</ol>
+<h1 id="手册"><a href="#手册" class="headerlink" title="手册"></a>手册</h1>]]></content>
   </entry>
   <entry>
     <title></title>
@@ -578,14 +584,18 @@
 <head>
     <title>System.css Starter</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="pointillism.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./system.css">
+    <link rel="stylesheet" type="text/css" href="./pointillism.css" />
+    <link rel="stylesheet" href="./pointillism.js" />
 
 </head>
 
-<body class="pointillism-body">
+<body>
 
     <div class="window" style="width:30rem;">
+        <div class="pointillism">
+            hello
+        </div>
         <div class="title-bar">
             <button aria-label="Close" class="close"></button>
             <h1 class="title">System.css</h1>
@@ -618,31 +628,7 @@
         </div>
     </div>
     <script>
-        console.log("进入界面")
-        window.onload = (event) => {
-            console.log("页面已完全加载");
 
-            //   let main = document.getElementsByClassName("post-block")[0];
-            let main = document.getElementsByClassName("main-inner")[0];
-            let column = document.getElementsByClassName("column")[0];
-            console.log(column.style)
-            column.style.display = "none";
-            console.log(main);
-            main.classList.add("pointillism");
-
-            console.log(main);
-        };
-
-
-        let time = null;
-
-        time = setInterval(() => {
-            console.log(document.readyState);
-            if (document.readyState == "complete") {
-                console.log("页面已完全加载");
-                clearInterval(time);
-            }
-        }, 0.1)
     </script>
 </body>
 
@@ -650,7 +636,45 @@
   </entry>
   <entry>
     <title></title>
-    <url>/lahp/art/pointillism/style.css</url>
+    <url>/lahp/art/pointillism/pointillism.js</url>
+    <content><![CDATA[console.log("进入界面")
+window.onload = (event) => {
+  console.log("页面已完全加载");
+
+//   let main = document.getElementsByClassName("post-block")[0];
+  let main = document.getElementsByClassName("main-inner")[0];
+  let column = document.getElementsByClassName("column")[0];
+  console.log(column.style)
+  column.style.display = "none";
+  console.log(main);
+main.classList.add("pointillism");
+
+    console.log(main);
+};
+
+
+    let time=null;
+
+time = setInterval(()=>{
+            console.log(document.readyState);
+            if(document.readyState == "complete"){
+                console.log("页面已完全加载");
+                clearInterval(time);}
+        },0.1)]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lahp/art/pointillism/pointillism.css</url>
+    <content><![CDATA[.pointillism {
+    width: 50px;
+    height: 50px;
+    background-color: rebeccapurple !important;
+
+}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lahp/art/pointillism/system.css</url>
     <content><![CDATA[/**
  * system.css
  * Copyright (c) 2022 Sakun Acharige <sakun.co>
@@ -1350,41 +1374,5 @@ ul [role="menu-item"].divider::after {
   margin-bottom: 1rem;
 }
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lahp/art/pointillism/pointillism.js</url>
-    <content><![CDATA[console.log("进入界面")
-window.onload = (event) => {
-  console.log("页面已完全加载");
-
-//   let main = document.getElementsByClassName("post-block")[0];
-  let main = document.getElementsByClassName("main-inner")[0];
-  let column = document.getElementsByClassName("column")[0];
-  console.log(column.style)
-  column.style.display = "none";
-  console.log(main);
-main.classList.add("pointillism");
-
-    console.log(main);
-};
-
-
-    let time=null;
-
-time = setInterval(()=>{
-            console.log(document.readyState);
-            if(document.readyState == "complete"){
-                console.log("页面已完全加载");
-                clearInterval(time);}
-        },0.1)]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lahp/art/pointillism/pointillism.css</url>
-    <content><![CDATA[.pointillism {
-    background-color: rebeccapurple !important;
-    width: 2000px;
-}]]></content>
   </entry>
 </search>

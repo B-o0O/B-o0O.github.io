@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://b-o0o.github.io/resource/ocean.html</loc>
+    
+    <lastmod>2025-03-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://b-o0o.github.io/lahp/art/pointillism/pointillism.html</loc>
     
     <lastmod>2025-03-09</lastmod>
@@ -104,15 +113,6 @@
     <loc>https://b-o0o.github.io/computer-science/missing-semester/git/git.html</loc>
     
     <lastmod>2024-12-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://b-o0o.github.io/resource/ocean.html</loc>
-    
-    <lastmod>2024-12-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -1,3 +1,4 @@
+https://b-o0o.github.io/resource/ocean.html
 https://b-o0o.github.io/lahp/art/pointillism/pointillism.html
 https://b-o0o.github.io/computer-science/index.html
 https://b-o0o.github.io/computer-science/web/html/html.html
@@ -10,7 +11,6 @@ https://b-o0o.github.io/categories/index.html
 https://b-o0o.github.io/lahp/history/HistoryOfModernChina.html
 https://b-o0o.github.io/tags/index.html
 https://b-o0o.github.io/computer-science/missing-semester/git/git.html
-https://b-o0o.github.io/resource/ocean.html
 https://b-o0o.github.io/lahp/art/index.html
 https://b-o0o.github.io/404/index.html
 https://b-o0o.github.io/science/tech-history/electric-communication.html
