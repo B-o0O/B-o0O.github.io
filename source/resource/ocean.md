@@ -21,4 +21,6 @@ tags:
 2. [MIT OpenCourseWare](https://ocw.mit.edu/)
    ![alt text](resource/ocean/site/mitocw.png)
 # 博客
+1. hexo建站
+   1. [自定义样式](https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next-custom/)**
 # 手册
