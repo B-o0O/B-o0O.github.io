@@ -22,3 +22,4 @@ time = setInterval(()=>{
                 console.log("页面已完全加载");
                 clearInterval(time);}
         },0.1)
+   
