@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://b-o0o.github.io/lahp/art/pointillism/pointillism.html</loc>
+    <loc>https://b-o0o.github.io/todo-list/index.html</loc>
+    
+    <lastmod>2025-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://b-o0o.github.io/lahp/art/photography/photography.html</loc>
+    
+    <lastmod>2025-03-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://b-o0o.github.io/lahp/art/nostalgia/nostalgia.html</loc>
+    
+    <lastmod>2025-03-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://b-o0o.github.io/lahp/art/nostalgia/98.css%20-%20A%20design%20system%20for%20building%20faithful%20recreations%20of%20old%20UIs.html</loc>
     
     <lastmod>2025-03-10</lastmod>
     
@@ -247,7 +274,7 @@
 
   <url>
     <loc>https://b-o0o.github.io/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -255,21 +282,21 @@
   
   <url>
     <loc>https://b-o0o.github.io/tags/ComputerHistory/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://b-o0o.github.io/tags/OS/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://b-o0o.github.io/tags/Web/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -278,21 +305,21 @@
   
   <url>
     <loc>https://b-o0o.github.io/categories/ComputerScience/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://b-o0o.github.io/categories/Web/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://b-o0o.github.io/categories/ComputerScience/TechHistory/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

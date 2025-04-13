@@ -1489,7 +1489,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #0893d2;
+    background: #ff0b22;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3093,4 +3093,9 @@ header.header {
   .sidebar {
     display: none;
   }
+}
+.pointillism {
+  background-color: #639 !important;
+  width: 2000px;
+  color: #ff0 !important;
 }
