@@ -122,12 +122,15 @@ menu:
       default: /literature/ || fa-solid fa-book-open
     Art: 
       default: /art/ || fa-solid fa-clapperboard
-      Pointillism: pointillism/pointillism.html
+      Nostalgia: nostalgia/nostalgia.html
+
     History: 
       default: /history/ || fa-solid fa-timeline
       HistoryOfModernChina: /HistoryOfModernChina.html || fa fa-book
     Philosophy: 
       default: /philosophy/ || fa-solid fa-graduation-cap
+  TodoList: 
+    default: /todo-list/ || fa-solid fa-square-check
   Resource: /resource/ocean.html || fa-solid fa-database
   categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags

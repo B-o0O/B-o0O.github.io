@@ -117,7 +117,8 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/B-o0O/B-o0O.github.io.git
+  # repo: https://github.com/B-o0O/B-o0O.github.io.git
+  repo: git@github.com:B-o0O/B-o0O.github.io.git
   branch: main
 
 #https://github.com/hexojs/hexo-generator-sitemap

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@sakun/system.css": "^0.1.11",
+    "98.css": "^0.1.20",
     "hexo": "^7.3.0",
     "hexo-asset-img": "^1.1.0",
     "hexo-deployer-git": "^4.0.0",

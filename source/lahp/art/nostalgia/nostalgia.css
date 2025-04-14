@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #c0c0c0;
+}
+
+main {
+    width: 65rem;
+    margin-left: 240px;
+    margin-bottom: 60px;
+}
+
+aside {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 8px;
+    display: flex;
+    align-items: stretch;
+}
