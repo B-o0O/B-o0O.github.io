@@ -34,10 +34,10 @@
 <link rel="canonical" href="https://b-o0o.github.io/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>B-o0O</title>
+<title>归档 | B-o0O</title>
   
 
 
@@ -181,490 +181,89 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
-
-    
+    <div class="main-inner archive posts-collapse">
 
 
-<div class="post-block">
   
   
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://b-o0o.github.io/WebComponents/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Bobo">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="B-o0O">
-      <meta itemprop="description" content="波波的博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | B-o0O">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/WebComponents/" class="post-title-link" itemprop="url">WebComponents</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-12-11 00:19:34" itemprop="dateCreated datePublished" datetime="2024-12-11T00:19:34+08:00">2024-12-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-15 19:40:38" itemprop="dateModified" datetime="2024-12-15T19:40:38+08:00">2024-12-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-        </span>
-    </span>
-
   
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <div class="note info"><p><a target="_blank" rel="noopener" href="https://kinsta.com/blog/web-components/#what-are-web-components">理解WebComponents</a></p>
-</div>
-<p>Web Components 作为一组技术于 2012 年提出，旨在通过提供封装、模块化和可重用的组件来改善 Web 开发。在Web Components出现之前，没有自定义（或风格化）组件并且做到可复用的方法，只是提供像jQuery这样的JS库来简化DOM操作，这种方法是通过使用 JavaScript 函数和对象来创建可复用的代码。例如，可以创建构造函数，使用这些构造函数来生成带有特定功能或样式的 DOM 元素，但缺乏一种系统化的方式来创建可重用的组件或封装的功能。W3C和WAHTWG组织将这些需求正式标准化、制定规范后，浏览器厂商根据规范开发相应的接口（API）以供使用，这部分API就叫做Web Components API,Web Components 的核心特性包括custom element、shadow dom、template。</p>
-<div class="tabs" id="webcomponent"><ul class="nav-tabs"><li class="tab active"><a href="#webcomponent-1">HTML DOM Tree</a></li><li class="tab"><a href="#webcomponent-2">custom elements</a></li><li class="tab"><a href="#webcomponent-3">shadowdom</a></li><li class="tab"><a href="#webcomponent-4">template</a></li><li class="tab"><a href="#webcomponent-5">example</a></li></ul><div class="tab-content"><div class="tab-pane active" id="webcomponent-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Node</span><br><span class="line">├── Document</span><br><span class="line">│   ├── DocumentFragment</span><br><span class="line">│   ├── DocumentType  (例如: &lt;!DOCTYPE html&gt;)</span><br><span class="line">│   └── ... (其他文档类型)</span><br><span class="line">├── Element</span><br><span class="line">│   ├── HTMLElement</span><br><span class="line">│   │   ├── HTMLAnchorElement           // <span class="language-xml"><span class="tag">&lt;<span class="name">a</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLBodyElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLDivElement              // <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLHeadingElement           // <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span>, <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span>, ..., <span class="language-xml"><span class="tag">&lt;<span class="name">h6</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLImageElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">img</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLInputElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">input</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLLabelElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLParagraphElement         // <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLSpanElement              // <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLTableElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLTableRowElement          // <span class="language-xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLTableCellElement         // <span class="language-xml"><span class="tag">&lt;<span class="name">td</span>&gt;</span></span>, <span class="language-xml"><span class="tag">&lt;<span class="name">th</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLFormElement              // <span class="language-xml"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span></span><br><span class="line">│   │   ├── HTMLSelectElement            // <span class="language-xml"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span></span><br><span class="line">│   │   └── ... (其他 HTML 元素)</span><br><span class="line">│   ├── SVGElement                       // SVG 元素的基础类</span><br><span class="line">│   │   ├── SVGCircleElement             // <span class="language-xml"><span class="tag">&lt;<span class="name">circle</span>&gt;</span></span></span><br><span class="line">│   │   ├── SVGRectElement               // <span class="language-xml"><span class="tag">&lt;<span class="name">rect</span>&gt;</span></span></span><br><span class="line">│   │   └── ... (其他 SVG 元素)</span><br><span class="line">│   ├── Text</span><br><span class="line">│   ├── Comment</span><br><span class="line">│   └── ... (其他节点类型，如 ProcessingInstruction)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="webcomponent-2"><p>通过继承 <code>HTMLElement</code> 类并实现其中的 API。具体包括：</p>
-<ul>
-<li><code>customElements.define(name, constructor, options)</code>：定义一个新的自定义元素。</li>
-<li><code>customElements.get(name)</code>：获取指定名称的自定义元素构造函数。</li>
-<li>生命周期回调方法：<ul>
-<li><code>connectedCallback</code>：当自定义元素被添加到文档 DOM 中时调用。</li>
-<li><code>disconnectedCallback</code>：当自定义元素从文档 DOM 中移除时调用。</li>
-<li><code>adoptedCallback</code>：当自定义元素被移动到新的文档时调用。</li>
-<li><code>attributeChangedCallback(name, oldValue, newValue)</code>：当自定义元素的属性被添加、移除或更改时调用。</li>
-</ul>
-</li>
-</ul></div><div class="tab-pane" id="webcomponent-3"><p>通过 Shadow API 封装自定义元素的样式。具体包括：</p>
-<ul>
-<li><code>attachShadow(options)</code>：将 shadow DOM 树附加到元素上。</li>
-<li><code>ShadowRoot</code>：shadow DOM 树的根节点，提供对 shadow DOM 的访问。</li>
-<li><code>mode</code>：指定 shadow DOM 的模式，可以是 <code>&#39;open&#39;</code> 或 <code>&#39;closed&#39;</code>。<ul>
-<li><code>&#39;open&#39;</code>：表示 shadow DOM 可以通过 JavaScript 访问。</li>
-<li><code>&#39;closed&#39;</code>：表示 shadow DOM 不能通过 JavaScript 访问。</li>
-</ul>
-</li>
-</ul>
-<p>通过这种方式，可以确保自定义元素的样式不会受到外部文档的影响，同时外部代码也无法直接改变该元素的样式。</p></div><div class="tab-pane" id="webcomponent-4"><p>使用模板语法，便于直接编写 HTML 语法，否则需要使用 <code>innerHTML</code>、<code>content</code> 等语法硬编码。具体包括：</p>
-<ul>
-<li><code>&lt;template&gt;</code>：定义可重用的模板。</li>
-<li><code>document.importNode(template.content, true)</code>：克隆模板内容。</li>
-<li><code>template.content.cloneNode(true)</code>：克隆模板内容（现代浏览器中更推荐使用 <code>importNode</code>）。</li>
-</ul>
-<p>通过模板语法，可以更清晰地组织和重用 HTML 内容，避免硬编码 HTML 字符串。</p></div><div class="tab-pane" id="webcomponent-5"><p><a href="/assets/html/my-element.html">效果</a></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Web Components 示例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Web Components 示例<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">my-element</span>&gt;</span><span class="tag">&lt;/<span class="name">my-element</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&quot;myTemplate&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-size</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个模板内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">class</span> <span class="title class_">MyElement</span> <span class="keyword">extends</span> <span class="title class_ inherited__">HTMLElement</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="variable language_">super</span>();</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> shadow = <span class="variable language_">this</span>.<span class="title function_">attachShadow</span>(&#123; <span class="attr">mode</span>: <span class="string">&#x27;open&#x27;</span> &#125;);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> template = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;myTemplate&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> clone = <span class="variable language_">document</span>.<span class="title function_">importNode</span>(template.<span class="property">content</span>, <span class="literal">true</span>);</span></span><br><span class="line"><span class="language-javascript">                shadow.<span class="title function_">appendChild</span>(clone);</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">        customElements.<span class="title function_">define</span>(<span class="string">&#x27;my-element&#x27;</span>, <span class="title class_">MyElement</span>);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
-<p>我们发现是不是和Vue SFC很像？其实是不一样的，Web Components方式是原生的JS，不依赖任何框架，Vue是通过VDOM方式实现的，现在似乎使用Web Components的越来越多了。<a target="_blank" rel="noopener" href="https://juejin.cn/post/7135805641943154702">点这里查看他们的区别</a></p>
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <span class="collection-header">嗯..! 目前共计 3 篇日志。 继续努力。</span>
+      </div>
 
       
+    <div class="collection-year">
+      <span class="collection-header">2024<span class="collection-year-count">3</span></span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-12-11T00:19:34+08:00"
+              content="2024-12-11">
+          12-11
+        </time>
+      </div>
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
+      <div class="post-title">
+          <a class="post-title-link" href="/WebComponents/" itemprop="url">
+            <span itemprop="name">WebComponents</span>
+          </a>
+      </div>
+
       
-    </footer>
+    </header>
   </article>
-</div>
 
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-12-08T23:05:41+08:00"
+              content="2024-12-08">
+          12-08
+        </time>
+      </div>
 
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://b-o0o.github.io/ComputerHistory/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Bobo">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="B-o0O">
-      <meta itemprop="description" content="波波的博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | B-o0O">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/ComputerHistory/" class="post-title-link" itemprop="url">ComputerHistory</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-12-08 23:05:41" itemprop="dateCreated datePublished" datetime="2024-12-08T23:05:41+08:00">2024-12-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-10 19:27:27" itemprop="dateModified" datetime="2024-12-10T19:27:27+08:00">2024-12-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ComputerScience/" itemprop="url" rel="index"><span itemprop="name">ComputerScience</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ComputerScience/TechHistory/" itemprop="url" rel="index"><span itemprop="name">TechHistory</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="计算机发展史"><a href="#计算机发展史" class="headerlink" title="计算机发展史"></a>计算机发展史</h1><p>一台计算机由软件和硬件构成，软件实际上就是具有逻辑性的信息集合，具体来说就是数据集和指令集的有序组织，信息的承载则是通过编码系统来实现的，现在的计算机几乎都使用二进制编码。硬件则是编码系统的物理承载介质，现在的计算机硬件结构都是基于冯诺依曼结构扩展而来的，早期计算机的发展是和硬件绑定的，大致可以分为继电器时期、真空管时期、晶体管时期。</p>
-<div>
-    <img src="/ComputerHistory/image.png" width="50%" height="50%" style="border: 1px solid black;float: left;">
-</div>
-
-
-<div style="clear: both;"></div>
-
-<h2 id="继电器时期"><a href="#继电器时期" class="headerlink" title="继电器时期"></a>继电器时期</h2><p>继电器时期的计算机称为机电计算机&#x2F;继电器计算机（Relay Computer&#x2F;Relay Systems），更早之前纯机械的则称为机械计算机，不在此讨论。</p>
-<details class="note info"><summary><p>Relay Systems</p>
-</summary>
-<p><a target="_blank" rel="noopener" href="https://en.wikichip.org/wiki/relay_computer">信息来源</a></p>
-<table>
-<thead>
-<tr>
-<th>System</th>
-<th>Developer</th>
-<th>Company&#x2F;Institution</th>
-<th>Relay Count</th>
-<th>Year Complete</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Model K</td>
-<td>George Stibitz</td>
-<td>Bell Labs</td>
-<td></td>
-<td>1937</td>
-<td></td>
-</tr>
-<tr>
-<td>Model I</td>
-<td>George Stibitz</td>
-<td>Bell Labs</td>
-<td>400</td>
-<td>1939</td>
-<td></td>
-</tr>
-<tr>
-<td>Z2</td>
-<td>Konrad Zuse</td>
-<td></td>
-<td>600</td>
-<td>1939</td>
-<td></td>
-</tr>
-<tr>
-<td>Z3</td>
-<td>Konrad Zuse</td>
-<td></td>
-<td>2,000</td>
-<td>1941</td>
-<td></td>
-</tr>
-<tr>
-<td>Model II</td>
-<td></td>
-<td>Bell Labs</td>
-<td>440</td>
-<td>1943</td>
-<td></td>
-</tr>
-<tr>
-<td>Z4</td>
-<td>Konrad Zuse</td>
-<td>Zuse Apparatebau</td>
-<td>2,500</td>
-<td>1944</td>
-<td></td>
-</tr>
-<tr>
-<td>Model III</td>
-<td></td>
-<td>Bell Labs</td>
-<td>1,400</td>
-<td>1944</td>
-<td></td>
-</tr>
-<tr>
-<td>Harvard Mark I</td>
-<td>Howard Aiken</td>
-<td>IBM</td>
-<td>3,500</td>
-<td>1944</td>
-<td></td>
-</tr>
-<tr>
-<td>Model IV</td>
-<td></td>
-<td>Bell Labs</td>
-<td>1,400</td>
-<td>1945</td>
-<td></td>
-</tr>
-<tr>
-<td>Model V</td>
-<td></td>
-<td>Bell Labs</td>
-<td>9,000</td>
-<td>1946</td>
-<td></td>
-</tr>
-<tr>
-<td>Harvard Mark II</td>
-<td>Howard Aiken</td>
-<td></td>
-<td></td>
-<td>1947</td>
-<td></td>
-</tr>
-<tr>
-<td>SSEC</td>
-<td></td>
-<td>IBM</td>
-<td>21,400</td>
-<td>1948</td>
-<td>vacuum tubes &amp; relays hybrid</td>
-</tr>
-<tr>
-<td>Baby Atlas</td>
-<td></td>
-<td>CSAW</td>
-<td></td>
-<td>1949</td>
-<td>Used for the debugging of the Atlas computer</td>
-</tr>
-<tr>
-<td>Model VI</td>
-<td></td>
-<td>Bell Labs</td>
-<td></td>
-<td>1950</td>
-<td></td>
-</tr>
-<tr>
-<td>BARK</td>
-<td></td>
-<td>Matematikmaskinnämnden</td>
-<td>8,000</td>
-<td>1950</td>
-<td></td>
-</tr>
-<tr>
-<td>Harwell Computer</td>
-<td></td>
-<td>Harwell</td>
-<td>480</td>
-<td>1951</td>
-<td>Made with 480 relays, 828 Dekatron valves for math</td>
-</tr>
-<tr>
-<td>Mark I</td>
-<td></td>
-<td>Electrotechnical Laboratory</td>
-<td></td>
-<td>1952</td>
-<td></td>
-</tr>
-<tr>
-<td>Z5</td>
-<td>Konrad Zuse</td>
-<td>Zuse KG</td>
-<td>2,500</td>
-<td>1953</td>
-<td></td>
-</tr>
-<tr>
-<td>FACOM 100</td>
-<td></td>
-<td>Fujitsu</td>
-<td></td>
-<td>1954</td>
-<td></td>
-</tr>
-<tr>
-<td>Z11</td>
-<td>Konrad Zuse</td>
-<td>Zuse KG</td>
-<td>1,665</td>
-<td>1955</td>
-<td></td>
-</tr>
-<tr>
-<td>Mark II</td>
-<td></td>
-<td>Electrotechnical Laboratory</td>
-<td>22,253</td>
-<td>1955</td>
-<td></td>
-</tr>
-</tbody></table>
-
-</details> 
-<h3 id="什么是继电器"><a href="#什么是继电器" class="headerlink" title="什么是继电器"></a>什么是继电器</h3><p>真空管<br>晶体管</p>
+      <div class="post-title">
+          <a class="post-title-link" href="/ComputerHistory/" itemprop="url">
+            <span itemprop="name">ComputerHistory</span>
+          </a>
+      </div>
 
       
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-12-08T22:16:46+08:00"
+              content="2024-12-08">
+          12-08
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/OSHistory/" itemprop="url">
+            <span itemprop="name">OSHistory</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+
     </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
+  </div>
   
   
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://b-o0o.github.io/OSHistory/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Bobo">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="B-o0O">
-      <meta itemprop="description" content="波波的博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | B-o0O">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/OSHistory/" class="post-title-link" itemprop="url">OSHistory</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-12-08 22:16:46 / 修改时间：23:02:20" itemprop="dateCreated datePublished" datetime="2024-12-08T22:16:46+08:00">2024-12-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ComputerScience/" itemprop="url" rel="index"><span itemprop="name">ComputerScience</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ComputerScience/TechHistory/" itemprop="url" rel="index"><span itemprop="name">TechHistory</span></a>
-        </span>
-    </span>
-
   
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
 
 </div>
   </main>
