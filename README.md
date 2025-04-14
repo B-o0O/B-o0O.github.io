@@ -21,7 +21,7 @@ hexo new [layout] "title" --path "path/to"
   ```
 + 添加网易云音乐
   直接使用网易云音乐外链（有些不行，看情况）
-  ![alt text](./image.png)
+  ![alt text](./assets/img/image.png)
 # next主题
 ## tag plugins
 + note
