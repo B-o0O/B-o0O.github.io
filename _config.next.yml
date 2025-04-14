@@ -123,6 +123,8 @@ menu:
     Art: 
       default: /art/ || fa-solid fa-clapperboard
       Nostalgia: nostalgia/nostalgia.html
+      Music: 
+        default: /music/
 
     History: 
       default: /history/ || fa-solid fa-timeline
