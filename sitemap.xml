@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://b-o0o.github.io/lahp/art/music/music.html</loc>
+    
+    <lastmod>2025-04-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://b-o0o.github.io/todo-list/index.html</loc>
     
     <lastmod>2025-04-13</lastmod>
@@ -274,7 +283,7 @@
 
   <url>
     <loc>https://b-o0o.github.io/</loc>
-    <lastmod>2025-04-13</lastmod>
+    <lastmod>2025-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -282,21 +291,21 @@
   
   <url>
     <loc>https://b-o0o.github.io/tags/ComputerHistory/</loc>
-    <lastmod>2025-04-13</lastmod>
+    <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://b-o0o.github.io/tags/OS/</loc>
-    <lastmod>2025-04-13</lastmod>
+    <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://b-o0o.github.io/tags/Web/</loc>
-    <lastmod>2025-04-13</lastmod>
+    <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -305,21 +314,21 @@
   
   <url>
     <loc>https://b-o0o.github.io/categories/ComputerScience/</loc>
-    <lastmod>2025-04-13</lastmod>
+    <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://b-o0o.github.io/categories/Web/</loc>
-    <lastmod>2025-04-13</lastmod>
+    <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://b-o0o.github.io/categories/ComputerScience/TechHistory/</loc>
-    <lastmod>2025-04-13</lastmod>
+    <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
