@@ -26,6 +26,15 @@ hexo new page "qing" --path "lahp/history/qing"
 +  "hexo server"
 
 功能：启动一个本地服务器。该命令会在本地启动一个开发服务器，通常默认在 http://localhost:4000 上运行。你可以在此地址预览你的网站，适用于开发和测试阶段。
++ 单独成页面
+  在front-matter设置layout:false即可
+  ```
+    ---
+    title: pointillism
+    date: 2025-03-08 15:24:56
+    layout: false
+    ---
+  ```
 # next主题
 ## tag plugins
 + note
