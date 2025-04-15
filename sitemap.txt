@@ -1,6 +1,6 @@
+https://b-o0o.github.io/todo-list/index.html
 https://b-o0o.github.io/lahp/art/music/index.html
 https://b-o0o.github.io/lahp/art/nostalgia/nostalgia.html
-https://b-o0o.github.io/todo-list/index.html
 https://b-o0o.github.io/lahp/art/photography/photography.html
 https://b-o0o.github.io/lahp/art/nostalgia/98.css%20-%20A%20design%20system%20for%20building%20faithful%20recreations%20of%20old%20UIs.html
 https://b-o0o.github.io/resource/ocean.html
@@ -34,5 +34,5 @@ https://b-o0o.github.io/tags/ComputerHistory/
 https://b-o0o.github.io/tags/OS/
 https://b-o0o.github.io/tags/Web/
 https://b-o0o.github.io/categories/ComputerScience/
-https://b-o0o.github.io/categories/ComputerScience/TechHistory/
 https://b-o0o.github.io/categories/Web/
+https://b-o0o.github.io/categories/ComputerScience/TechHistory/
